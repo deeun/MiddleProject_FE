@@ -1,0 +1,22 @@
+.header {
+  background-color: rgba(255, 255, 255, 0.74);
+  padding: 20px;
+  margin: 0;
+  overflow: hidden;
+  color: #191919e3;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 20px;
+  width: 100%;
+  display : flex;
+  justify-content: space-around;
+  text-align: center;
+  list-style: none;
+  align-items : center;
+  flex-wrap: wrap;
+}
+
+/* .logo {
+  margin-left: 100px;
+} */
+
