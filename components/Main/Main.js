@@ -1,14 +1,15 @@
 import React from 'react'
 import { useRouter } from 'next/router'
 import styles from '../Main/Main.module.css'
+import SearchResult from '../Ours/Our/SearchResult'
 
 const Main = (props) => {
   const router = useRouter();
 
-  const experienceList = () => {
-
-    router.push('/ours/list')
+  const searchResult = () => {
+    router.push('/ours/searchResult')
   }
+
   return (
     <>
     <div className={styles.body}>
@@ -28,7 +29,7 @@ const Main = (props) => {
                 <input className={styles.search_checkout} type="date" id="checkout" autoComplete="off" placeholder="체크아웃" /> 
               </span>
             <br/>
-            <button className={styles.search_button} onClick = {experienceList}>검색</button>
+            <button className={styles.search_button} onClick = {searchResult}>검색</button>
           </div>
         </div>
         
@@ -51,9 +52,9 @@ const Main = (props) => {
           <div className={styles.mapareaImg}>
             <img className={styles.map} src="/images/templemap.png" />     
             <div className={styles.number}>
-              <div className={styles.number1}><a href="/temple_search.aspx?searchword=경기&amp;opt=area"><h3>3</h3>경기</a></div>
-              <div className={styles.number2}><a href="/temple_search.aspx?searchword=인천&amp;opt=area"><h3>2</h3>인천</a></div>
-              <div className={styles.number3}><a href="/temple_search.aspx?searchword=강원&amp;opt=area"><h3>4</h3>강원</a></div>
+              <div className={styles.number1}><a href="/ours/states/state1"><h3>3</h3>경기</a></div>
+              <div className={styles.number2}><a href="/ours/states/state2"><h3>2</h3>인천</a></div>
+              <div className={styles.number3}><a href="/ours/states/state3"><h3>4</h3>강원</a></div>
               <div className={styles.number4}><a href="/temple_search.aspx?searchword=충남&amp;opt=area"><h3>4</h3>충남</a></div>
               <div className={styles.number5}><a href="/temple_search.aspx?searchword=전남&amp;opt=area"><h3>7</h3>전남</a></div>
               <div className={styles.number6}><a href="/temple_search.aspx?searchword=전북&amp;opt=area"><h3>2</h3>전북</a></div>
