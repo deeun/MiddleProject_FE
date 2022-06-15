@@ -1,0 +1,98 @@
+
+.map {
+    width: 300px;
+    margin-top: 50px;
+    margin-bottom: 30px;
+    position: relative;
+}
+
+.mapareaText {
+    margin-top: 50px;
+    margin-left: 40px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.mapareaText2 {
+    margin-top: 22px;
+    margin-left: 40px;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 25px;
+
+}
+.flexbox {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.flexboxleft {
+    background-color: rgb(255, 254, 224);
+    float: left;
+    width:35%;
+    height: 500px;
+    box-sizing: border-box;
+    margin-top : 100px;
+    padding-left : 30px; 
+    font-size: 25px;
+    color:rgb(34, 32, 32);
+}
+@media screen and (max-width:1023px){
+    .item{
+        flex-basis: 49%;
+    }
+}
+@media screen and (max-width:767px){
+    .item{
+        flex-basis: 100%;
+    }
+}
+
+.flexboxright {
+    background-color: rgb(254, 255, 201);
+    float: left;
+    margin-top : 100px;
+    width:35%;
+    height: 500px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    line-height: 25px;
+    position: relative;
+}
+
+.searchword {
+    width: 85%;
+	height: 40px;
+	font-size: 18px;
+    border: 1px solid rgba(27, 31, 35, .15);
+    border-radius: 6px;
+    box-shadow: rgba(27, 31, 35, .1) 0 1px 0;
+    -webkit-appearance: none;
+}
+
+/* .box1 {
+    top: 150px;
+    right: 125px;
+    text-align: center;
+    line-height: 0px; 
+    position: absolute;
+    border-color: black;
+}
+
+.box2 {
+    top: 105px;
+    right: 200px;
+    text-align: center;
+    line-height: 0px; 
+    position: absolute;
+}
+
+.box3 {
+    top: 90px;
+    right: 60px;
+    text-align: center;
+    line-height: 0px; 
+    position: absolute;
+} */
