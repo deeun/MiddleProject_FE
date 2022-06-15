@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-import { getOurAPI, postOurAPI } from '../../../lib/api/ours'
 import { useRouter } from 'next/router'
 
 const Our = (props) => {
@@ -10,7 +9,7 @@ const Our = (props) => {
  
   return (
     <li>
-        {props.id} - {props.title}
+      {props.stateName}
     </li>
   )
 }

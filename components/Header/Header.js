@@ -21,13 +21,13 @@ const Header = (props) => {
     router.push('/ours/checkReservation')
   }
 
-  const aboutClickHandler = () => {
-    router.replace('/ours/about')
+  // const aboutClickHandler = () => {
+  //   router.replace('/ours/about')
     
-    return (
-      <About ours={props.ours}/>
-    )
-  }
+  //   return (
+  //     <About ours={props.ours}/>
+  //   )
+  // }
     
   return (
     <>
@@ -39,8 +39,7 @@ const Header = (props) => {
             {/* 농/수산물 구분하는 버튼 만들어야함 */}
           <li><a href="http://localhost:3000/ours/checkReservation">예약 확인</a></li>
           <li><a href="http://localhost:3000/ours/about">체험 소개</a></li>
-        
-          {/* <li><button onClick={aboutClickHandler}>체험소개</button></li> */}
+          <li><a href="http://localhost:3000/ours/login">마이페이지</a></li>
         </ul>
       </div>
       
