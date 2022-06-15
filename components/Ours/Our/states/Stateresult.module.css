@@ -1,0 +1,21 @@
+.table {
+    border-collapse: collapse;
+    /* width: 70%; */
+    background-color: white;
+    text-align: center;
+    margin-left: 100px;
+    margin-top: 20px;
+}
+
+.th, .td {
+    padding: 10px;
+    text-align: center;
+}
+
+.th {
+    width: 200px;
+}
+
+.td {
+    width: 700px;
+}

@@ -23,15 +23,14 @@ const  Details = (props) => {
       
       <div className={styles.flexboxright}>
         <div className={styles.info}>
-          <h1>체험지 01. 시골마을</h1>
-          <h3>시골냄새 가득 시골마을</h3>
-          <div className={styles.box1}><box>주소: </box></div><br/>
-          <div className={styles.box2}><box>연락처: </box></div><br/>
-          <div className={styles.box3}><box>체험명: </box></div><br/>
-        </div>
+          <h3>체험지 01. 시골마을</h3>
+          <h5>시골냄새 가득 시골마을</h5>
+          <div className={styles.box1}>주소</div><br/>
+          <div className={styles.box2}>연락처</div><br/>
+          <div className={styles.box3}>체험명</div><br/>
         
-          <button className={styles.btn} onClick = {Reservation}>예약하기</button>
-             
+        </div>
+        <button className={styles.rsv_btn} onClick ={Reservation}>예약하기</button>
         </div>
         
 

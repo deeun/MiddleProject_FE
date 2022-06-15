@@ -13,69 +13,80 @@ const Main = (props) => {
   }
   return (
     <>
-    <div className={styles.contentbox}>
-      <h1>체험명 SAMPLE</h1>
-      <table className={styles.table} border="1">
-        <th>구분</th>
-        <th>성인</th>
-        <th>중it고등학생</th>
-        <th>초등학생</th>
-        <tr>
-          <td>1박</td>
-          <td>50,000원</td>
-          <td>30,000원</td>
-          <td>10,000원</td>
-        </tr>
-      </table>
-      <br/>
+    <div className={styles.body}>
+      <div className={styles.contentbox}>
+        <img src="/images/house.png"></img>
+        <h1 className={styles.expname}>시골냄새가득 시골마을</h1>
+        <table className={styles.table} border="1">
+          <th>&nbsp;구분&nbsp;</th>
+          <th className={styles.th}>성인</th>
+          <th className={styles.th}>&nbsp;중고등학생&nbsp;</th>
+          <th className={styles.th}>&nbsp;초등학생&nbsp;</th>
+          <tr>
+            <td className={styles.td}>&nbsp;1박&nbsp;</td>
+            <td className={styles.td}>&nbsp;50,000원&nbsp;</td>
+            <td className={styles.td}>&nbsp;30,000원&nbsp;</td>
+            <td className={styles.td}>&nbsp;10,000원&nbsp;</td>
+          </tr>
+        </table>
+        <br/>
+        <br/>
 
-      <div>
-      일정을 선택해 주세요. <br/>
-      <input type="date"></input>
-      ~
-      <input type="date"></input> <br/>
-      <br/><br/>
-      </div>
+        <div className={styles.text1}>
+        일정을 선택해 주세요. <br/>
+        <input className={styles.dateinput} type="date"></input>
+        &nbsp;&nbsp;~&nbsp;&nbsp;
+        <input className={styles.dateinput} type="date"></input> <br/>
+        <br/><br/>
+        </div>
 
-      <div>
-      <span>
-      참가인원을 선택해주세요 (본인 포함)<br/>
-      ※ 미취학 아동, 10명 이상의 단체 방문의 경우 연락 바랍니다.<br/>
-      <select name="adultcount">
-        <option value="">성인</option>
-        <option value="1">1</option>
-        <option value="2">2</option>
-        <option value="3">3</option>
-        <option value="4">4</option>
-        <option value="5">5</option>
-        <option value="6">6</option>
-        <option value="7">7</option>
-        <option value="8">8</option>
-        <option value="9">9</option>
-        <option value="10">10</option>
-      </select>&nbsp;
-      <select name="studentcount">
-        <option value="">학생</option>
-        <option value="1">1</option>
-        <option value="2">2</option>
-        <option value="3">3</option>
-        <option value="4">4</option>
-        <option value="5">5</option>
-        <option value="6">6</option>
-        <option value="7">7</option>
-        <option value="8">8</option>
-        <option value="9">9</option>
-        <option value="10">10</option>
-      </select>
-      </span>
-      <br/><br/>
-      </div>
-
-     
-      <br/>
-     
-     
-      <button>예약하기</button>
+        <div className={styles.text1}>
+        참가인원을 선택해주세요 (본인 포함)<br/>
+        </div>
+        <div className={styles.text2}>
+        ※ 미취학 아동, 10명 이상의 단체 방문의 경우 연락 바랍니다.<br/>
+        <select className={styles.adultcount} name="adultcount">
+          <option value="">성인</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+          <option value="6">6</option>
+          <option value="7">7</option>
+          <option value="8">8</option>
+          <option value="9">9</option>
+          <option value="10">10</option>
+        </select>&nbsp;&nbsp;
+        <select className={styles.studentcount} name="studentcount">
+          <option value="">중고등학생</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+          <option value="6">6</option>
+          <option value="7">7</option>
+          <option value="8">8</option>
+          <option value="9">9</option>
+          <option value="10">10</option>
+        </select>&nbsp;&nbsp;
+        <select className={styles.childrencount} name="childrencount">
+          <option value="">초등학생</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+          <option value="6">6</option>
+          <option value="7">7</option>
+          <option value="8">8</option>
+          <option value="9">9</option>
+          <option value="10">10</option>
+        </select>
+        </div>
+        <button className={styles.reservationbutton} onClick = {ReservationFinish}>예약하기</button>
+        </div> 
     </div>
     </>
   )
