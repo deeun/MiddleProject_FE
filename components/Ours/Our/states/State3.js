@@ -1,15 +1,18 @@
 import React from 'react'
 import Stateresult from './Stateresult';
+import styles from './State3.module.css';
 
 const State3 = (props) => {
   console.log(props);
   return (
     <>
-      <h1>농어촌 체험이란</h1>
+    <div className={styles.title}>
+      <h2>농어촌 체험이란</h2>
+      </div>
+       
        <Stateresult />
     </>
   )
 }
 
-export default State3;
-
+export default State3
