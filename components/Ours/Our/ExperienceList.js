@@ -83,7 +83,7 @@ const Main = (props) => {
     <div className={styles.main} >
       <li className={styles.clearfix}>
           <div className={styles.listing_image}>
-            <img src="https://mblogthumb-phinf.pstatic.net/MjAxNzA4MThfMTU1/MDAxNTAzMDE2NjQyNDg4.UmQWomvjzmoHgDicO-O283AwL9HG45CMB7Rdj6sB3uwg.VFG_ghR93ntKb4QsF5CToxL1-_qamjIzXRDuTT_qd9Qg.JPEG.koempr/SSL24133_-_%EB%B3%B5%EC%82%AC%EB%B3%B8.JPG?type=w800"></img>
+            <img  src="https://mblogthumb-phinf.pstatic.net/MjAxNzA4MThfMTU1/MDAxNTAzMDE2NjQyNDg4.UmQWomvjzmoHgDicO-O283AwL9HG45CMB7Rdj6sB3uwg.VFG_ghR93ntKb4QsF5CToxL1-_qamjIzXRDuTT_qd9Qg.JPEG.koempr/SSL24133_-_%EB%B3%B5%EC%82%AC%EB%B3%B8.JPG?type=w800"></img>
             <div className={styles.et_rest}>체험형</div>
           </div>
           <div className={styles.listing_text}>
@@ -92,13 +92,15 @@ const Main = (props) => {
               <p>(주소)경상남도 통영시 봉수로 107-82  (전화번호)055-648-1048<br/>
               </p>
           </div> 
-          <a href="/temple_info.asp?t_id=tsyong" className={styles.temple_link}  target="_blank">사찰정보보기</a>
-          <a  className={styles.readmore_link} onClick = {Details}>예약하기</a>
+          <div className={styles.rsv_btn}>
+              <a  className={styles.readmore_link} onClick = {Details}>예약하기</a>
+              <a href="/temple_info.asp?t_id=tsyong" className={styles.temple_link}  target="_blank">숙박정보보기</a>
+          </div>
       </li>
 
       <li className={styles.clearfix}>
           <div className={styles.listing_image}>
-            <img src="https://cdn.greenpostkorea.co.kr/news/thumbnail/201810/96981_92657_1717_v150.jpg"></img>
+            <img  src="https://cdn.greenpostkorea.co.kr/news/thumbnail/201810/96981_92657_1717_v150.jpg"></img>
             <div className={styles.et_rest}>체험형</div>
           </div>
           <div className={styles.listing_text}>
@@ -108,12 +110,14 @@ const Main = (props) => {
               <p>(주소)경상남도 통영시 한산면 추봉리 202 마을체험안내센터  (전화번호)055-649-8861<br/>
               </p>
           </div> 
-          <a href="/temple_info.asp?t_id=tsyong" className={styles.temple_link}  target="_blank">사찰정보보기</a>
-          <a  className={styles.readmore_link} onClick = {Details}>예약하기</a>
+          <div className={styles.rsv_btn}>
+            <a  className={styles.readmore_link} onClick = {Details}>예약하기</a>
+            <a href="/temple_info.asp?t_id=tsyong" className={styles.temple_link}  target="_blank">사찰정보보기</a>
+          </div>
       </li>
       <li className={styles.clearfix}>
           <div className={styles.listing_image}>
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSEmEMuJ8XNbITTRdK3kh75RBBV-lUPDJaIDA&usqp=CAU"></img>
+            <img  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSEmEMuJ8XNbITTRdK3kh75RBBV-lUPDJaIDA&usqp=CAU"></img>
             <div className={styles.et_rest}>체험형</div>
           </div>
           <div className={styles.listing_text}>
@@ -123,23 +127,26 @@ const Main = (props) => {
               <p>(주소)경상남도 통영시 한산면 추봉리 202 마을체험안내센터  (전화번호)055-649-8861<br/>
               </p>
           </div> 
-          <a href="/temple_info.asp?t_id=tsyong" className={styles.temple_link}  target="_blank">사찰정보보기</a>
-          <a  className={styles.readmore_link} onClick = {Details}>예약하기</a>
+          <div className={styles.rsv_btn}>
+            <a  className={styles.readmore_link} onClick = {Details}>예약하기</a>
+            <a href="/temple_info.asp?t_id=tsyong" className={styles.temple_link}  target="_blank">사찰정보보기</a>
+          </div>
       </li>
       <li className={styles.clearfix}>
           <div className={styles.listing_image}>
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQla2yzi9ESAqgVubv_FXd5CVxNFH_h5h2cAg&usqp=CAU"></img>
+            <img  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQla2yzi9ESAqgVubv_FXd5CVxNFH_h5h2cAg&usqp=CAU"></img>
             <div className={styles.et_rest}>체험형</div>
           </div>
           <div className={styles.listing_text}>
               <h3>남애어촌체험휴양마을</h3>
-              <p className={styles.listing_textclass}>강원도, 체험형
-                              </p>
+              <p className={styles.listing_textclass}>강원도, 체험형</p>
               <p>(주소)경상남도 통영시 한산면 추봉리 202 마을체험안내센터  (전화번호)055-649-8861<br/>
               </p>
           </div> 
-          <a href="/temple_info.asp?t_id=tsyong" className={styles.temple_link}  target="_blank">사찰정보보기</a>
-          <a  className={styles.readmore_link} onClick = {Details}>예약하기</a>
+          <div className={styles.rsv_btn}>
+              <a  className={styles.readmore_link} onClick = {Details}>예약하기</a>
+              <a href="/temple_info.asp?t_id=tsyong" className={styles.temple_link}  target="_blank">사찰정보보기</a>
+          </div>
       </li>
       <li className={styles.clearfix}>
           <div className={styles.listing_image}>
@@ -153,8 +160,10 @@ const Main = (props) => {
               <p>(주소)경상남도 통영시 한산면 추봉리 202 마을체험안내센터  (전화번호)055-649-8861<br/>
               </p>
           </div> 
-          <a href="/temple_info.asp?t_id=tsyong" className={styles.temple_link}  target="_blank">사찰정보보기</a>
-          <a  className={styles.readmore_link} onClick = {Details}>예약하기</a>
+          <div className={styles.rsv_btn}>
+            <a  className={styles.readmore_link} onClick = {Details}>예약하기</a>
+            <a href="/temple_info.asp?t_id=tsyong" className={styles.temple_link}  target="_blank">사찰정보보기</a>
+          </div>
       </li>
       <li className={styles.clearfix}>
           <div className={styles.listing_image}>
@@ -168,8 +177,10 @@ const Main = (props) => {
               <p>(주소)경상남도 통영시 한산면 추봉리 202 마을체험안내센터  (전화번호)055-649-886<br/>
               </p>
           </div> 
-          <a href="/temple_info.asp?t_id=tsyong" className={styles.temple_link}  target="_blank">사찰정보보기</a>
-          <a  className={styles.readmore_link} onClick = {Details}>예약하기</a>
+          <div className={styles.rsv_btn}>
+              <a  className={styles.readmore_link} onClick = {Details}>예약하기</a>
+              <a href="/temple_info.asp?t_id=tsyong" className={styles.temple_link}  target="_blank">사찰정보보기</a>
+          </div>
       </li>
       <li className={styles.clearfix}>
           <div className={styles.listing_image}>
@@ -183,8 +194,10 @@ const Main = (props) => {
               <p>(주소)경상남도 통영시 한산면 추봉리 202 마을체험안내센터  (전화번호)055-649-8861<br/>
               </p>
           </div> 
-          <a href="/temple_info.asp?t_id=tsyong" className={styles.temple_link}  target="_blank">사찰정보보기</a>
-          <a  className={styles.readmore_link} onClick = {Details}>예약하기</a>
+          <div className={styles.rsv_btn}>
+            <a  className={styles.readmore_link} onClick = {Details}>예약하기</a>
+            <a href="/temple_info.asp?t_id=tsyong" className={styles.temple_link}  target="_blank">사찰정보보기</a>
+          </div>
       </li>
       <li className={styles.clearfix}>
           <div className={styles.listing_image}>
@@ -198,8 +211,10 @@ const Main = (props) => {
               <p>(주소)경상남도 통영시 한산면 추봉리 202 마을체험안내센터  (전화번호)055-649-8861<br/>
               </p>
           </div> 
-          <a href="/temple_info.asp?t_id=tsyong" className={styles.temple_link}  target="_blank">사찰정보보기</a>
-          <a  className={styles.readmore_link} onClick = {Details}>예약하기</a>
+          <div className={styles.rsv_btn}>
+            <a  className={styles.readmore_link} onClick = {Details}>예약하기</a>
+            <a href="/temple_info.asp?t_id=tsyong" className={styles.temple_link}  target="_blank">사찰정보보기</a>
+          </div>
       </li>
       <li className={styles.clearfix}>
           <div className={styles.listing_image}>
@@ -213,8 +228,10 @@ const Main = (props) => {
               <p>(주소)경상남도 통영시 한산면 추봉리 202 마을체험안내센터  (전화번호)055-649-8861<br/>
               </p>
           </div> 
-          <a href="/temple_info.asp?t_id=tsyong" className={styles.temple_link}  target="_blank">사찰정보보기</a>
-          <a  className={styles.readmore_link} onClick = {Details}>예약하기</a>
+          <div className={styles.rsv_btn}>
+              <a  className={styles.readmore_link} onClick = {Details}>예약하기</a>
+              <a href="/temple_info.asp?t_id=tsyong" className={styles.temple_link}  target="_blank">사찰정보보기</a>
+          </div>
       </li>
       <li className={styles.clearfix}>
           <div className={styles.listing_image}>
@@ -243,8 +260,10 @@ const Main = (props) => {
               <p>(주소)경상남도 통영시 한산면 추봉리 202 마을체험안내센터  (전화번호)055-649-8861<br/>
               </p>
           </div> 
-          <a href="/temple_info.asp?t_id=tsyong" className={styles.temple_link}  target="_blank">사찰정보보기</a>
-          <a  className={styles.readmore_link} onClick = {Details}>예약하기</a>
+          <div className={styles.rsv_btn}>
+              <a  className={styles.readmore_link} onClick = {Details}>예약하기</a>
+              <a href="/temple_info.asp?t_id=tsyong" className={styles.temple_link}  target="_blank">사찰정보보기</a>
+          </div>
       </li>
       <li className={styles.clearfix}>
           <div className={styles.listing_image}>
@@ -258,8 +277,10 @@ const Main = (props) => {
               <p>(주소)경상남도 통영시 한산면 추봉리 202 마을체험안내센터  (전화번호)055-649-8861<br/>
               </p>
           </div> 
-          <a href="/temple_info.asp?t_id=tsyong" className={styles.temple_link}  target="_blank">사찰정보보기</a>
-          <a  className={styles.readmore_link} onClick = {Details}>예약하기</a>
+          <div className={styles.rsv_btn}>
+              <a  className={styles.readmore_link} onClick = {Details}>예약하기</a>
+              <a href="/temple_info.asp?t_id=tsyong" className={styles.temple_link}  target="_blank">사찰정보보기</a>
+          </div>
       </li>
       <li className={styles.clearfix}>
           <div className={styles.listing_image}>
@@ -273,8 +294,10 @@ const Main = (props) => {
               <p>(주소)경상남도 통영시 한산면 추봉리 202 마을체험안내센터  (전화번호)055-649-8861<br/>
               </p>
           </div> 
-          <a href="/temple_info.asp?t_id=tsyong" className={styles.temple_link}  target="_blank">사찰정보보기</a>
-          <a  className={styles.readmore_link} onClick = {Details}>예약하기</a>
+          <div className={styles.rsv_btn}>
+              <a  className={styles.readmore_link} onClick = {Details}>예약하기</a>
+              <a href="/temple_info.asp?t_id=tsyong" className={styles.temple_link}  target="_blank">사찰정보보기</a>
+          </div>
       </li>
       <li className={styles.clearfix}>
           <div className={styles.listing_image}>
@@ -288,8 +311,10 @@ const Main = (props) => {
               <p>(주소)경상남도 통영시 한산면 추봉리 202 마을체험안내센터  (전화번호)055-649-8861<br/>
               </p>
           </div> 
-          <a href="/temple_info.asp?t_id=tsyong" className={styles.temple_link}  target="_blank">사찰정보보기</a>
-          <a  className={styles.readmore_link} onClick = {Details}>예약하기</a>
+          <div className={styles.rsv_btn}>
+              <a  className={styles.readmore_link} onClick = {Details}>예약하기</a>
+              <a href="/temple_info.asp?t_id=tsyong" className={styles.temple_link}  target="_blank">사찰정보보기</a>
+          </div>
       </li>
       <li className={styles.clearfix}>
           <div className={styles.listing_image}>
@@ -303,8 +328,10 @@ const Main = (props) => {
               <p>(주소)경상남도 통영시 한산면 추봉리 202 마을체험안내센터  (전화번호)055-649-8861<br/>
               </p>
           </div> 
-          <a href="/temple_info.asp?t_id=tsyong" className={styles.temple_link}  target="_blank">사찰정보보기</a>
-          <a  className={styles.readmore_link} onClick = {Details}>예약하기</a>
+          <div className={styles.rsv_btn}>
+              <a  className={styles.readmore_link} onClick = {Details}>예약하기</a>
+              <a href="/temple_info.asp?t_id=tsyong" className={styles.temple_link}  target="_blank">사찰정보보기</a>
+          </div>
       </li>
       <li className={styles.clearfix}>
           <div className={styles.listing_image}>
@@ -318,8 +345,10 @@ const Main = (props) => {
               <p>(주소)경상남도 통영시 한산면 추봉리 202 마을체험안내센터  (전화번호)055-649-8861<br/>
               </p>
           </div> 
-          <a href="/temple_info.asp?t_id=tsyong" className={styles.temple_link}  target="_blank">사찰정보보기</a>
-          <a  className={styles.readmore_link} onClick = {Details}>예약하기</a>
+          <div className={styles.rsv_btn}>
+              <a  className={styles.readmore_link} onClick = {Details}>예약하기</a>
+              <a href="/temple_info.asp?t_id=tsyong" className={styles.temple_link}  target="_blank">사찰정보보기</a>
+          </div>
       </li>
       <li className={styles.clearfix}>
           <div className={styles.listing_image}>
@@ -637,8 +666,23 @@ const Main = (props) => {
           <a  className={styles.readmore_link} onClick = {Details}>예약하기</a>
       </li>
 
+      {/* <div className={styles.pagenavi}>
+        <span className={styles.pages}>Page 1 of 50</span>
+          <a id="content_LinkFirst" className={styles.previouspostslink}>≪</a>
+          <a id="content_LinkPrev" className={styles.previouspostslink}>〈</a>               
+          <a id="content_Repeater2_LinkPage_0" className={styles.page_larger} href="javascript:__doPostBack('ctl00$content$Repeater2$ctl00$LinkPage','')" >1</a>                                  
+  
+          <a id="content_Repeater2_LinkPage_1" className={styles.page_larger} href="javascript:__doPostBack('ctl00$content$Repeater2$ctl01$LinkPage','')">2</a>                                  
+  
+          <a id="content_Repeater2_LinkPage_2" className={styles.page_larger} href="javascript:__doPostBack('ctl00$content$Repeater2$ctl02$LinkPage','')">3</a>                                  
+  
+          <a id="content_Repeater2_LinkPage_3" className={styles.page_larger} href="javascript:__doPostBack('ctl00$content$Repeater2$ctl03$LinkPage','')">4</a>                                  
+  
+          <a id="content_Repeater2_LinkPage_4" className={styles.page_larger} href="javascript:__doPostBack('ctl00$content$Repeater2$ctl04$LinkPage','')">5</a>                                  
+          <a id="content_LinkNext" className = {styles.nextpostslink} rel="next" href="javascript:__doPostBack('ctl00$content$LinkNext','')">〉</a> 
+          <a id="content_LinkLast" className={styles.lastpostslink} rel="next" href="javascript:__doPostBack('ctl00$content$LinkLast','')">≫</a>
+                    </div> */}
     </div>
-    
     </>
   )
 }
