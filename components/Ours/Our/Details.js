@@ -1,24 +1,24 @@
-import React from 'react'
+import React,{useEffect} from 'react'
 import { useRouter } from 'next/router'
 import styles from '../Our/Details.module.css'
-// import styles from '../../Layout/Main/'
+import KakaoMap from "../Our/Kakaomap";
+
 
 // 체험 상세정보
 
-const Main = (props) => {
+const  Details = (props) => {
   const router = useRouter();
   const Reservation = () => {
     console.log('Reservation');
-    router.push('/ours/reservation')
+    router.push('/ours/reservation')                       
   }
-  return (
-    <>
+
+    return (
+      <>
     <div className={styles.flexbox}>
 
       <div className={styles.flexboxleft}>
-        <div class="img" id="map">
-        <img className={styles.map} src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQOOScfb_rNQSNSKmAG4YhNvRdSyBkVzjkAKw&usqp=CAU" />
-        </div>
+      <KakaoMap />
       </div>
       
       <div className={styles.flexboxright}>
@@ -41,4 +41,4 @@ const Main = (props) => {
   )
 }
 
-export default Main
+export default Details
