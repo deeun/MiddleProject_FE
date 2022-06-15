@@ -35,15 +35,10 @@
       "static/chunks/main.js",
       "static/chunks/pages/ours/list.js"
     ],
-    "/ours/market": [
+    "/ours/reservation": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",
-      "static/chunks/pages/ours/market.js"
-    ],
-    "/ours/states/state1": [
-      "static/chunks/webpack.js",
-      "static/chunks/main.js",
-      "static/chunks/pages/ours/states/state1.js"
+      "static/chunks/pages/ours/reservation.js"
     ]
   },
   "ampFirstPages": []

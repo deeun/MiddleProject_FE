@@ -1,5 +1,4 @@
 import React from 'react'
-import Ours from '../../../components/Ours/Ours'
 import State2 from '../../../components/Ours/Our/states/State2'
 import Stateresults from '../../../components/Ours/Our/states/Stateresults'
 
@@ -17,7 +16,7 @@ const add = (props) => {
 
 export const getServerSideProps = async () => {
   try{
-    const res = await fetch('http://localhost:8080/program_list/state/인천');
+    const res = await fetch('http://localhost:8080/program_list/address/인천');
     const ours = await res.json();
     return{ //객체를 반환
       props: {ours} //그 객체는 props라는 이름의 프로퍼티를 가지고 있고,

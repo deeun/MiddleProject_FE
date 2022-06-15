@@ -30,7 +30,7 @@ const Main = (props) => {
           <div className={styles.box3}>체험명</div><br/>
         
         </div>
-        <button className={styles.rsv_btn} onClick = {Reservation}>예약하기</button>
+        <button className={styles.rsv_btn} onClick ={Reservation}>예약하기</button>
         </div>
         
 
