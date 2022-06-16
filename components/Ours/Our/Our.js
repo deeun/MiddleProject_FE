@@ -1,9 +1,6 @@
 import React, { useState } from 'react'
 import { useRouter } from 'next/router'
 import styles from './Our.module.css'
-import Details from './Details';
-import Ours from '../Ours';
-
 
 const Our = (props) => {
 

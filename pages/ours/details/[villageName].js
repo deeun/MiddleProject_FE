@@ -2,13 +2,13 @@ import React from 'react'
 import Details from '../../../components/Ours/Our/Details'
 import Detailslists from '../../../components/Ours/Our/Detailslists'
 import { useRouter } from 'next/router';
+
 const add = (props) => {
     const router = useRouter();
-    // console.log(router.query.villageName);
+   
   return (
     <>
     <Details />
-    {/* <Detailslists realName={router.query.villageName} />  */}
     <Detailslists realName={router.query.villageName} 
     detailslists = {props.ours}/>
     </>
