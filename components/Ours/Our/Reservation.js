@@ -10,6 +10,20 @@ const Reservation = () => {
  const [customerName, setCustomerName] = useState('');
  const [customerPhone, setCustomerPhone] = useState('');
 
+//병권 작성중
+// const Reservation = (props) => {
+//   const router = useRouter();
+//   const reservation_click = () => {
+//     const inputName = document.getElementById("name").value;
+//     const inputPhone = document.getElementById("phone").value;
+//     console.log(inputName);
+//     console.log(inputPhone);
+//     router.push(`/ours/reservationFinish/${inputName}${inputPhone}`)
+    
+//   }
+//   return (  
+
+  
  // 각각의 handler 함수 작성
  const nameSendHandler = (event) => {
     setCustomerName(event.target.value);
@@ -34,10 +48,12 @@ const Reservation = () => {
 
   return (
     <>
+  
     <div className={styles.body}>
       <div className={styles.contentbox}>
         <img src="/images/house.png"></img>
-        <h1 className={styles.expname}>시골냄새 가득 시골마을</h1>
+        <h1 className={styles.expname}>{props.villageName}</h1>
+
         <table className={styles.table} border="1">
         <thead>
           <tr>
@@ -121,10 +137,8 @@ const Reservation = () => {
         </div>
         <button className={styles.reservationbutton} onClick = {sendReserv}>예약하기</button>
         </div>
-        </div> 
+       </div> 
     </div>
-
-    
     </>
   )
 }
