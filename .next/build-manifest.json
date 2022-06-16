@@ -25,25 +25,15 @@
       "static/chunks/main.js",
       "static/chunks/pages/_error.js"
     ],
-    "/ours/details/[villageName]": [
+    "/ours/main": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",
-      "static/chunks/pages/ours/details/[villageName].js"
+      "static/chunks/pages/ours/main.js"
     ],
-    "/ours/list": [
+    "/ours/market": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",
-      "static/chunks/pages/ours/list.js"
-    ],
-    "/ours/reservation": [
-      "static/chunks/webpack.js",
-      "static/chunks/main.js",
-      "static/chunks/pages/ours/reservation.js"
-    ],
-    "/ours/reservationFinish": [
-      "static/chunks/webpack.js",
-      "static/chunks/main.js",
-      "static/chunks/pages/ours/reservationFinish.js"
+      "static/chunks/pages/ours/market.js"
     ]
   },
   "ampFirstPages": []
