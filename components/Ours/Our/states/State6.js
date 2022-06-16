@@ -18,7 +18,6 @@ const State6 = (props) => {
       </h1>
       <br/>
       </div>
-       <Stateresult />
     </>
   )
 }
