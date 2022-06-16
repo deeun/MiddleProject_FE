@@ -6,6 +6,7 @@ import styles from './ReservationFinish.module.css'
 
 const Main = (props) => {
   const router = useRouter();
+  router.query.name
   const Main = () => {
     console.log('Main');
     router.push('/ours/main')
@@ -20,8 +21,8 @@ const Main = (props) => {
           <th className={styles.th}>&nbsp;연락처&nbsp;</th>
           <th className={styles.th}>&nbsp;예약번호&nbsp;</th>
           <tr>
-            <td className={styles.td}>&nbsp;최지원&nbsp;</td>
-            <td className={styles.td}>&nbsp;010-3327-5124&nbsp;</td>
+            <td className={styles.td}>&nbsp;{props.name}&nbsp;</td>
+            <td className={styles.td}>&nbsp;{props.phone}&nbsp;</td>
             <td className={styles.td}>&nbsp;REDFKDJADJ234&nbsp;</td>
             </tr>
         </table>

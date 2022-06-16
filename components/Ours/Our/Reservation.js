@@ -7,17 +7,21 @@ import styles from './Reservation.module.css'
 
 const Reservation = (props) => {
   const router = useRouter();
-  const ReservationFinish = () => {
-    console.log('ReservationFinish');
-    router.push('/ours/reservationFinish')
+  const reservation_click = () => {
+    const inputName = document.getElementById("name").value;
+    const inputPhone = document.getElementById("phone").value;
+    console.log(inputName);
+    console.log(inputPhone);
+    router.push(`/ours/reservationFinish/${inputName}${inputPhone}`)
+    
   }
-  return (
+  return (  
     <>
   
     <div className={styles.body}>
       <div className={styles.contentbox}>
         <img src="/images/house.png"></img>
-        <h1 className={styles.expname}>시골냄새가득 시골마을</h1>
+        <h1 className={styles.expname}>{props.villageName}</h1>
         <table className={styles.table} border="1">
         <thead>
           <tr>
@@ -96,10 +100,10 @@ const Reservation = (props) => {
         <br/>
         신청자 정보를 입력해주세요. <br/>
         <div className={styles.text2}>
-        이름 : <input className={styles.input} id="name" /> &nbsp;&nbsp;
-        연락처 : <input className={styles.input} id="phone" />
+        이름 : <input className={styles.input} type="text" id="name" /> &nbsp;&nbsp;
+        연락처 : <input className={styles.input} type="text" id="phone" />
         </div>
-        <button className={styles.reservationbutton} onClick = {ReservationFinish}>예약하기</button>
+        <button className={styles.reservationbutton} onClick = {()=>reservation_click()}>예약하기</button>
         </div>
         </div> 
     </div>

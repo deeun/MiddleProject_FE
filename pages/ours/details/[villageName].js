@@ -4,7 +4,7 @@ import { useRouter } from 'next/router';
 
 const add = (props) => {
     const router = useRouter();
-   
+    console.log(router.query.villageName);
   return (
     <>
     <Detailslists realName={router.query.villageName} detailslists = {props.ours}/>
