@@ -1,23 +1,43 @@
 import React from 'react'
 import { useRouter } from 'next/router'
-import ReservationFinish from './ReservationFinish'
 import styles from './Reservation.module.css'
+import { useState } from 'react'
+import { postAccommAPI } from '../../../lib/api/accommodation'
 
-// 체험 예약정보 입력페이지
+const Reservation = () => {
+  // const router = useRouter();
+  
+ const [customerName, setCustomerName] = useState('');
+ const [customerPhone, setCustomerPhone] = useState('');
 
-const Reservation = (props) => {
-  const router = useRouter();
-  const ReservationFinish = () => {
-    console.log('ReservationFinish');
-    router.push('/ours/reservationFinish')
+ // 각각의 handler 함수 작성
+ const nameSendHandler = (event) => {
+    setCustomerName(event.target.value);
+  };
+
+  const phoneSendHandler = (event) => {
+    setCustomerPhone(event.target.value);
   }
+
+ // addTodo 함수 작성
+ const sendReserv = () => {
+     const data = {
+         customerName : customerName,
+         customerPhone : customerPhone,
+     }
+     console.log(data);
+
+     postAccommAPI(data);
+
+    // router.replace('/');
+ }
+
   return (
     <>
-  
     <div className={styles.body}>
       <div className={styles.contentbox}>
         <img src="/images/house.png"></img>
-        <h1 className={styles.expname}>시골냄새가득 시골마을</h1>
+        <h1 className={styles.expname}>시골냄새 가득 시골마을</h1>
         <table className={styles.table} border="1">
         <thead>
           <tr>
@@ -65,7 +85,7 @@ const Reservation = (props) => {
           <option value="9">9</option>
           <option value="10">10</option>
         </select>&nbsp;&nbsp;
-        <select className={styles.studentcount} name="studentcount">
+        {/* <select className={styles.studentcount} name="studentcount">
           <option value="">중고등학생</option>
           <option value="1">1</option>
           <option value="2">2</option>
@@ -90,19 +110,21 @@ const Reservation = (props) => {
           <option value="8">8</option>
           <option value="9">9</option>
           <option value="10">10</option>
-        </select>
+        </select> */}
         </div>
         <div className={styles.text1}>
         <br/>
         신청자 정보를 입력해주세요. <br/>
-        <div className={styles.text2}>
-        이름 : <input className={styles.input} id="name" /> &nbsp;&nbsp;
-        연락처 : <input className={styles.input} id="phone" />
+        <div className={styles.text3}>
+        이름 : <input type="text" name="customerName" value={customerName} onChange={nameSendHandler} className={styles.input} id="name" /> &nbsp;&nbsp;
+        연락처 : <input type="text" name="customerPhone" value={customerPhone} onChange={phoneSendHandler} className={styles.input} id="phone" />
         </div>
-        <button className={styles.reservationbutton} onClick = {ReservationFinish}>예약하기</button>
+        <button className={styles.reservationbutton} onClick = {sendReserv}>예약하기</button>
         </div>
         </div> 
     </div>
+
+    
     </>
   )
 }

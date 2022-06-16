@@ -7,7 +7,7 @@ const Our = (props) => {
  // useRouter
  const router = useRouter();
  const detail = (e) => {
-  console.log(e.target.value);
+  // console.log(e.target.value);
   router.push(`/ours/details/${e.target.value}`);
 }
  
