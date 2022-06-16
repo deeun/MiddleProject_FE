@@ -4,11 +4,9 @@ import styles from '../Our/Details.module.css'
 import KakaoMap from "../Our/Kakaomap";
 import Detailslists from './Detailslists';
 
-
 // 체험 상세정보
-
 const  Details = (props) => {
-  console.log(props, "여기");
+  // console.log(props, "여기");
   const router = useRouter();
   const Reservation = () => {
     console.log('Reservation');
@@ -34,7 +32,6 @@ const  Details = (props) => {
         <button className={styles.rsv_btn} onClick ={Reservation}>예약하기</button>
         </div>
         </div>
-        {/* <Detailslists /> */}
 
         
     </>

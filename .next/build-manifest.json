@@ -15,11 +15,6 @@
     "static/development/_middlewareManifest.js"
   ],
   "pages": {
-    "/": [
-      "static/chunks/webpack.js",
-      "static/chunks/main.js",
-      "static/chunks/pages/index.js"
-    ],
     "/_app": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",
@@ -30,10 +25,10 @@
       "static/chunks/main.js",
       "static/chunks/pages/_error.js"
     ],
-    "/ours/states/state2": [
+    "/ours/details/[villageName]": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",
-      "static/chunks/pages/ours/states/state2.js"
+      "static/chunks/pages/ours/details/[villageName].js"
     ]
   },
   "ampFirstPages": []
