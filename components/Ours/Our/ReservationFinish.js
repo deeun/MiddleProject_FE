@@ -8,7 +8,6 @@ const Main = (props) => {
   const router = useRouter();
   router.query.name
   const Main = () => {
-    console.log('Main');
     router.push('/ours/main')
   }
   return (

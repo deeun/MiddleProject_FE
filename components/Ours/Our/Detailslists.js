@@ -1,7 +1,6 @@
 import { Router, useRouter } from 'next/router';
 import React, { useEffect } from 'react'
 import styles from '../../Ours/Our/Detailslists.module.css'
-import Reservation from '../Our/Reservation'
 import Kakaomap from './Kakaomap';
 
 let place = {};
@@ -12,6 +11,7 @@ const Detailslists = (props) => {
             place = detailslist;
         }
     });
+
     const villageName = place.villageName
     console.log("행복"+villageName);
     // villageName : 거북이 행복마을
