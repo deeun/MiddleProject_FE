@@ -25,16 +25,6 @@
       "static/chunks/main.js",
       "static/chunks/pages/_error.js"
     ],
-    "/ours/details/[villageName]": [
-      "static/chunks/webpack.js",
-      "static/chunks/main.js",
-      "static/chunks/pages/ours/details/[villageName].js"
-    ],
-    "/ours/list": [
-      "static/chunks/webpack.js",
-      "static/chunks/main.js",
-      "static/chunks/pages/ours/list.js"
-    ],
     "/ours/reservation": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",

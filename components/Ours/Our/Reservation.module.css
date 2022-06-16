@@ -1,6 +1,17 @@
+
+.input {
+    width: 10%;
+	height: 30px;
+	font-size: 18px;
+    border: 1px solid rgba(27, 31, 35, .15);
+    border-radius: 6px;
+    box-shadow: rgba(27, 31, 35, .1) 0 1px 0;
+    outline: none;
+}
+
 .contentbox {
     margin-left: 100px;
-    margin-top: 50px;
+    margin-top: 30px;
 }
 
 .expname {
