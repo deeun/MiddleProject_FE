@@ -4,7 +4,7 @@ import styles from './Our.module.css'
 import Reservation from './Reservation'
 
 const Detailslist = (props) => {
- console.log("똑똑", props);
+//  console.log("똑똑", props);
 
  
  // useRouter

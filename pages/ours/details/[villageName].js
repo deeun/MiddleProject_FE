@@ -8,7 +8,9 @@ const add = (props) => {
   return (
     <>
     <Details />
-    <Detailslists realName={router.query.villageName} detailslists = {props.ours}/> 
+    {/* <Detailslists realName={router.query.villageName} />  */}
+    <Detailslists realName={router.query.villageName} 
+    detailslists = {props.ours}/>
     </>
     )
   }
