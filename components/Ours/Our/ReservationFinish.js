@@ -7,7 +7,6 @@ import styles from './ReservationFinish.module.css'
 const Main = (props) => {
   const router = useRouter();
   const Main = () => {
-    console.log('Main');
     router.push('/ours/main')
   }
   return (
