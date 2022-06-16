@@ -2,10 +2,12 @@ import React from 'react'
 import { useRouter } from 'next/router'
 import ReservationFinish from './ReservationFinish'
 import styles from './Reservation.module.css'
+import Detailslists from './Detailslists'
 
 // 체험 예약정보 입력페이지
 
 const Reservation = (props) => {
+  console.log(props.villageName);
   const router = useRouter();
   const ReservationFinish = () => {
     console.log('ReservationFinish');
@@ -13,11 +15,10 @@ const Reservation = (props) => {
   }
   return (
     <>
-  
     <div className={styles.body}>
       <div className={styles.contentbox}>
         <img src="/images/house.png"></img>
-        <h1 className={styles.expname}>시골냄새가득 시골마을</h1>
+        <h1 className={styles.expname}>{props.villageName}</h1>
         <table className={styles.table} border="1">
         <thead>
           <tr>
@@ -95,7 +96,7 @@ const Reservation = (props) => {
         <div className={styles.text1}>
         <br/>
         신청자 정보를 입력해주세요. <br/>
-        <div className={styles.text2}>
+        <div className={styles.text3}>
         이름 : <input className={styles.input} id="name" /> &nbsp;&nbsp;
         연락처 : <input className={styles.input} id="phone" />
         </div>
