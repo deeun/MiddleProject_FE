@@ -1,17 +1,22 @@
 import React, { useState } from 'react'
 import { useRouter } from 'next/router'
 import styles from './Our.module.css'
-import Details from './Details'
+import Details from './Details';
+import Ours from '../Ours';
+
 
 const Our = (props) => {
 
  // useRouter
  const router = useRouter();
- const detail = () => {
-  router.push('/ours/details')
+ const detail = (e) => {
+  console.log(e.target.value);
+  router.push(`/ours/details/${e.target.value}`);
 }
  
   return (
+    <>
+   
     <li>
       <div className={styles.listing_text}>
               <h3>{props.villageName}</h3>
@@ -21,10 +26,11 @@ const Our = (props) => {
               </p>
           </div> 
           <div className={styles.rsv_btn}>
-              <a className={styles.readmore} onClick = {detail}>예약하기</a>
-              <a href="/temple_info.asp?t_id=tsyong" className={styles.temple_link}  target="_blank">숙박정보보기</a>
+              <button value={props.villageName} onClick={detail}>예약하기</button>
+              {/* <a href="/temple_info.asp?t_id=tsyong" className={styles.temple_link}  target="_blank">숙박정보보기</a> */}
           </div>
     </li>
+    </>
   )
 }
 

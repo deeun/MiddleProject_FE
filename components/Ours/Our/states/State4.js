@@ -7,7 +7,16 @@ const State4 = (props) => {
   return (
     <>
     <div className={styles.title}>
-      <h2>농어촌 체험이란</h2>
+      <img src = "/images/land.png" />
+      <h1>
+      <span className={styles.title2}>
+        충청남도&nbsp;
+      </span>
+      <span>
+        농어촌 체험하기
+      </span>
+      </h1>
+      <br/>
       </div>
        
        <Stateresult />
