@@ -5,14 +5,17 @@ import styles from './Stateresult.module.css'
 const Stateresult = (props) => {
  // useRouter
  const router = useRouter();
+ const reservation = () => {
+  router.push('/ours/reservation')
+}
 
   return (
     <>
     <table className={styles.table} border="1">
           <thead>
             <tr>
-              <th className = {styles.th}>구분</th>
-              <th className = {styles.th}>내용</th>
+              <th className = {styles.th1}>구분</th>
+              <th className = {styles.th1}>내용</th>
             </tr>
           </thead>
           <tbody>
@@ -34,7 +37,8 @@ const Stateresult = (props) => {
             </tr>
           </tbody>
         </table>
-        <br/><br/>
+        <button onClick={reservation} className={styles.button}>예약하기</button>
+        <br/><br/><br/>
         </>
 
   )

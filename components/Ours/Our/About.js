@@ -7,7 +7,6 @@ const About = (props) => {
     <>
       <h1>농어촌 체험이란</h1>
       <br/>
-      <Our />
     </>
   )
 }

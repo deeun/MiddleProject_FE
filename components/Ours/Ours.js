@@ -3,8 +3,6 @@ import { getOurAPI } from '../../lib/api/ours';
 import Our from '../Ours/Our/Our'
 
 const Ours = (props) => {
-
-    console.log(props);
     // if (props.our) {
         const ours = props.ours.map (our => (
             <Our 
