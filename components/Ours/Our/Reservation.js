@@ -4,25 +4,11 @@ import styles from './Reservation.module.css'
 import { useState } from 'react'
 import { postAccommAPI } from '../../../lib/api/accommodation'
 
-const Reservation = () => {
-  // const router = useRouter();
+const Reservation = (props) => {
+  const router = useRouter();
   
  const [customerName, setCustomerName] = useState('');
  const [customerPhone, setCustomerPhone] = useState('');
-
-//병권 작성중
-// const Reservation = (props) => {
-//   const router = useRouter();
-//   const reservation_click = () => {
-//     const inputName = document.getElementById("name").value;
-//     const inputPhone = document.getElementById("phone").value;
-//     console.log(inputName);
-//     console.log(inputPhone);
-//     router.push(`/ours/reservationFinish/${inputName}${inputPhone}`)
-    
-//   }
-//   return (  
-
   
  // 각각의 handler 함수 작성
  const nameSendHandler = (event) => {
@@ -32,19 +18,51 @@ const Reservation = () => {
   const phoneSendHandler = (event) => {
     setCustomerPhone(event.target.value);
   }
+ 
+  //셀렉트박스
+  const [customerCount, setCustomerCount] = useState("");
 
- // addTodo 함수 작성
- const sendReserv = () => {
-     const data = {
-         customerName : customerName,
-         customerPhone : customerPhone,
-     }
-     console.log(data);
+  const counts = [1,2,3,4,5,6,7,8,9,10];
 
-     postAccommAPI(data);
+  const options = counts.map((count) => {
+    return <option value={count}>{count}</option>;
+  });
 
-    // router.replace('/');
- }
+  console.log(customerCount);
+
+  const countSendHandler = (event) => {
+    setCustomerCount(event.target.value);
+  };
+  
+  // const [reservationNumber, setReservationNumber] = useState("");
+  
+  function generateReservNum(){
+    let alphabet = 'abcdefghijklmnopqrstuvwxyz';
+    var makeReservNum = '';
+    for(let i=0; i<9;i++){
+        let index = Math.floor(Math.random(10) * alphabet.length);
+        makeReservNum += alphabet[index];        
+    }
+    return makeReservNum;    
+  }
+
+  const reservationNumber = generateReservNum();
+  console.log(reservationNumber);
+  
+  // addTodo 함수 작성
+  const sendReserv = () => {
+    const data = {
+      customerName : customerName,
+      customerPhone : customerPhone,
+      customerCount : customerCount,
+      reservationNumber : reservationNumber,
+  }
+  console.log(data);
+  
+  postAccommAPI(data);
+
+ router.replace('/ours/reservationFinish');
+}
 
   return (
     <>
@@ -59,8 +77,7 @@ const Reservation = () => {
           <tr>
           <th>&nbsp;구분&nbsp;</th>
           <th className={styles.th}>성인</th>
-          <th className={styles.th}>&nbsp;중고등학생&nbsp;</th>
-          <th className={styles.th}>&nbsp;초등학생&nbsp;</th>
+          <th className={styles.th}>&nbsp;학생&nbsp;</th>
           </tr>
         </thead>
         <tbody>
@@ -68,7 +85,6 @@ const Reservation = () => {
             <td className={styles.td}>&nbsp;1박&nbsp;</td>
             <td className={styles.td}>&nbsp;50,000원&nbsp;</td>
             <td className={styles.td}>&nbsp;30,000원&nbsp;</td>
-            <td className={styles.td}>&nbsp;10,000원&nbsp;</td>
           </tr>
           </tbody>
         </table>
@@ -88,45 +104,9 @@ const Reservation = () => {
         </div>
         <div className={styles.text2}>
         ※ 미취학 아동, 10명 이상의 단체 방문의 경우 연락 바랍니다.<br/>
-        <select className={styles.adultcount} name="adultcount">
-          <option value="">성인</option>
-          <option value="1">1</option>
-          <option value="2">2</option>
-          <option value="3">3</option>
-          <option value="4">4</option>
-          <option value="5">5</option>
-          <option value="6">6</option>
-          <option value="7">7</option>
-          <option value="8">8</option>
-          <option value="9">9</option>
-          <option value="10">10</option>
+        <select onChange={countSendHandler} className={styles.adultcount} name="adultcount">
+          {options}
         </select>&nbsp;&nbsp;
-        {/* <select className={styles.studentcount} name="studentcount">
-          <option value="">중고등학생</option>
-          <option value="1">1</option>
-          <option value="2">2</option>
-          <option value="3">3</option>
-          <option value="4">4</option>
-          <option value="5">5</option>
-          <option value="6">6</option>
-          <option value="7">7</option>
-          <option value="8">8</option>
-          <option value="9">9</option>
-          <option value="10">10</option>
-        </select>&nbsp;&nbsp;
-        <select className={styles.childrencount} name="childrencount">
-          <option value="">초등학생</option>
-          <option value="1">1</option>
-          <option value="2">2</option>
-          <option value="3">3</option>
-          <option value="4">4</option>
-          <option value="5">5</option>
-          <option value="6">6</option>
-          <option value="7">7</option>
-          <option value="8">8</option>
-          <option value="9">9</option>
-          <option value="10">10</option>
-        </select> */}
         </div>
         <div className={styles.text1}>
         <br/>
@@ -142,5 +122,6 @@ const Reservation = () => {
     </>
   )
 }
+
 
 export default Reservation
