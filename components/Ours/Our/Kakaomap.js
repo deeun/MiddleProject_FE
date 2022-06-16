@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
-import Coordinates from '../Coordinates';
-import Ours from '../Ours';
+import styles from '../Our/Kakaomap.module.css'
+
 
 const Kakaomap = (props) => {
   console.log(props.latitude);
@@ -50,7 +50,9 @@ const Kakaomap = (props) => {
   
 
   return (
+    <div className={styles.map}>
     <div id="map" style={{width: '35rem', height: '30rem', display: 'flex'}}></div>
+    </div>
   )
 
 }
