@@ -32,11 +32,13 @@ const Main = (props) => {
                     </span> 
                     <div className={styles.et_filte}>
                       <input type="submit" name="ctl00$content$buttonSearch" value="검색" onClick="return submit_check() ;" className={styles.content_buttonSearch} />    
-                      </div>   
+                      </div>
                   </div> 
+                  
                 </div> 
               </div> 
           </div>  
+          <div className={styles.main}></div>
     </>
   )
 }

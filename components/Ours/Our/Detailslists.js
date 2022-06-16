@@ -1,3 +1,4 @@
+import { Router, useRouter } from 'next/router';
 import React, { useEffect } from 'react'
 import styles from '../../Ours/Our/Detailslists.module.css'
 import Reservation from '../Our/Reservation'
@@ -10,23 +11,24 @@ const Detailslists = (props) => {
             place = detailslist;
         }
     });
-    
+    const router = useRouter();
+    const Reservation = () => {
+      console.log('Reservation');
+      router.push('/ours/reservation')                       
+    }
     return (
         <>
-    <div>
-        <div className={styles.flexboxright}>
-         <div className={styles.info}>
-          <h3>체험명</h3>
-          <h2>{place.villageName}</h2>
-          <div className={styles.box1}>{place.address}</div><br/>
-          <div className={styles.box2}>{place.managerPhone}</div><br/>
-          <div className={styles.box3}>{place.experienceName}</div><br/>
+        <div className={styles.main}>
+            <div className={styles.area1}>
+            <h3>체험명</h3>
+            <h2>{place.villageName}</h2>
+            {place.experienceName}<br/><br/>
+            {place.address}<br/>
+            {place.managerPhone}<br/><br/><br/>
+            <button className={styles.rsv_btn} onClick ={Reservation}>예약하기</button>
+            </div>
+            <Kakaomap latitude={place.latitude} longitude={place.longitude}/>
         </div>
-        <button className={styles.rsv_btn} onClick ={Reservation}>예약하기</button>
-        </div>
-        </div> 
-
-        <Kakaomap latitude={place.latitude} longitude={place.longitude}/>
         </>
         );
     };

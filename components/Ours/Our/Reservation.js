@@ -5,7 +5,7 @@ import styles from './Reservation.module.css'
 
 // 체험 예약정보 입력페이지
 
-const Main = (props) => {
+const Reservation = (props) => {
   const router = useRouter();
   const ReservationFinish = () => {
     console.log('ReservationFinish');
@@ -13,21 +13,28 @@ const Main = (props) => {
   }
   return (
     <>
+  
     <div className={styles.body}>
       <div className={styles.contentbox}>
         <img src="/images/house.png"></img>
         <h1 className={styles.expname}>시골냄새가득 시골마을</h1>
         <table className={styles.table} border="1">
+        <thead>
+          <tr>
           <th>&nbsp;구분&nbsp;</th>
           <th className={styles.th}>성인</th>
           <th className={styles.th}>&nbsp;중고등학생&nbsp;</th>
           <th className={styles.th}>&nbsp;초등학생&nbsp;</th>
+          </tr>
+        </thead>
+        <tbody>
           <tr>
             <td className={styles.td}>&nbsp;1박&nbsp;</td>
             <td className={styles.td}>&nbsp;50,000원&nbsp;</td>
             <td className={styles.td}>&nbsp;30,000원&nbsp;</td>
             <td className={styles.td}>&nbsp;10,000원&nbsp;</td>
           </tr>
+          </tbody>
         </table>
         <br/>
         <br/>
@@ -85,11 +92,19 @@ const Main = (props) => {
           <option value="10">10</option>
         </select>
         </div>
+        <div className={styles.text1}>
+        <br/>
+        신청자 정보를 입력해주세요. <br/>
+        <div className={styles.text2}>
+        이름 : <input className={styles.input} id="name" /> &nbsp;&nbsp;
+        연락처 : <input className={styles.input} id="phone" />
+        </div>
         <button className={styles.reservationbutton} onClick = {ReservationFinish}>예약하기</button>
+        </div>
         </div> 
     </div>
     </>
   )
 }
 
-export default Main
+export default Reservation
