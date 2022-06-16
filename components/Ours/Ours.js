@@ -19,6 +19,8 @@ const Ours = (props) => {
                 longitude={our.longitude}
             />
         ));
+
+
         return (
             <div>
             <ul>

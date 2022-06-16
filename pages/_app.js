@@ -18,19 +18,4 @@ function MyApp({ Component, pageProps}) {
   )
 }
 
-// MyApp.getInitialProps = async ({ Component, ctx }) => {
-//   // const appProps = await MyApp.getInitialProps(appContext)
-
-//   let pageProps = {};
-//   if (Component.getInitialProps) {
-//     // Component의 context로 ctx를 넣어주자
-//     pageProps = await Component.getInitialProps(ctx);
-//   }
-
-
-//   // console.log('getInitailProps!')
-
-//   return { pageProps };
-// }
-
 export default MyApp

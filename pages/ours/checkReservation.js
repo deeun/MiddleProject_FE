@@ -1,7 +1,5 @@
 import React from 'react'
-import Ours from '../../components/Ours/Ours'
 import CheckReservation from '../../components/Ours/Our/CheckReservation'
-import Oursmarket from '../../components/Ours/Our/Oursmarket'
 import Oursmarkets from '../../components/Ours/Oursmarkets'
 
 // 네비게이션바에서 CheckReservtion로 연결해주는 api
