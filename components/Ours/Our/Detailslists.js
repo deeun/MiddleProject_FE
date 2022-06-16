@@ -28,7 +28,6 @@ const Detailslists = (props) => {
             <button className={styles.rsv_btn} onClick ={Reservation}>예약하기</button>
             </div>
             <Kakaomap latitude={place.latitude} longitude={place.longitude}/>
-            <Reservation villageName={place.villageName} />
         </div>
         </>
         );

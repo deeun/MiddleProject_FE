@@ -1,7 +1,7 @@
 import React from 'react'
 import { useRouter } from 'next/router'
 import styles from '../Main/Main.module.css'
-import Footer from '../Footer/Footer'
+import SearchResult from '../Ours/Our/SearchResult'
 
 const Main = (props) => {
   const router = useRouter();
@@ -66,7 +66,6 @@ const Main = (props) => {
         </div>
       </div>
     </div>
-    <Footer />
     </>
  )}
 

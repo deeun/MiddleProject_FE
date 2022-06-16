@@ -25,15 +25,15 @@
       "static/chunks/main.js",
       "static/chunks/pages/_error.js"
     ],
-    "/ours/details/[villageName]": [
+    "/ours/main": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",
-      "static/chunks/pages/ours/details/[villageName].js"
+      "static/chunks/pages/ours/main.js"
     ],
-    "/ours/reservation": [
+    "/ours/market": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",
-      "static/chunks/pages/ours/reservation.js"
+      "static/chunks/pages/ours/market.js"
     ]
   },
   "ampFirstPages": []

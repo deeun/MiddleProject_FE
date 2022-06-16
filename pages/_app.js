@@ -1,3 +1,4 @@
+import Footer from '../components/Footer/Footer'
 import Header from '../components/Header/Header'
 import styles from '../styles/globals.css'
 import React, { useState } from 'react'
@@ -10,6 +11,7 @@ function MyApp({ Component, pageProps}) {
       <div className={styles.wrapper}>
         <div className={styles.contentwrap}>
       <Component {...pageProps} />
+      <Footer />
       </div>
     </div>
     </div>
