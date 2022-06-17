@@ -34,11 +34,13 @@ const Detailslists = (props) => {
         <>
         <div className={styles.main}>
             <div className={styles.area1}>  
-            <h3>체험명</h3>
+            <h3>체험명</h3><br/>
             <h2>{place.villageName}</h2>
+            <span className={styles.text}>
             {place.experienceName}<br/><br/>
             {place.address}<br/>
             {place.managerPhone}<br/><br/><br/>
+            </span>
             <button className={styles.rsv_btn} onClick ={Reservation}>예약하기</button>
             </div>
             <Kakaomap latitude={place.latitude} longitude={place.longitude}/>

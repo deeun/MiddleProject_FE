@@ -229,14 +229,7 @@ const Market = (props) => {
 
     </div>   
       </div>
-      <div>
-        <div onClick={() => setShowModal(true)} className="btn">
-          <Comment /> 
-        </div>
-        <Modal show = {showModal} onClose={() => setShowModal(false)}>
-          test
-        </Modal>
-      </div>
+
       
     </>
   )
