@@ -1,0 +1,38 @@
+.about {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    margin-left: 100px;
+    font-size: x-large;
+  
+}
+
+.info {
+    /* margin-bottom: 0; */
+    margin-left: 100px;
+    margin-right: 70px;
+    font-size: larger;
+    background:white; 
+    background : rgba(0, 0, 0, 0.03);
+    padding: 30px;
+}
+
+.Image {
+    margin-left: 100px;
+    margin-bottom: 100px;
+}
+
+
+.img1 {
+    width: 45rem;
+    height: 30rem;
+    padding: 30px;
+    border-radius: 15%;
+
+}
+
+.img2 {
+    width: 45rem;
+    height: 30rem;
+    padding: 30px;
+    border-radius: 15%;
+}
