@@ -1,14 +1,9 @@
 import React, { useState } from 'react'
 import { useRouter } from 'next/router'
 import styles from './Market.module.css'
-import Comment from '../../../public/static/svg/comment.svg';
 import Modal from '../../Modal';
 
 // 농수산물 구매하기
-
-
-
-
 
 const Market = (props) => {
   

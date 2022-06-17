@@ -4,27 +4,12 @@ import styles from './Reservation.module.css'
 import { useState } from 'react'
 import { postAccommAPI } from '../../../lib/api/accommodation'
 
-const Reservation = () => {
-  // const router = useRouter();
-  
+const Reservation = (props) => {
  const [customerName, setCustomerName] = useState('');
  const [customerPhone, setCustomerPhone] = useState('');
 
-//병권 작성중
-// const Reservation = (props) => {
-//   const router = useRouter();
-//   const reservation_click = () => {
-//     const inputName = document.getElementById("name").value;
-//     const inputPhone = document.getElementById("phone").value;
-//     console.log(inputName);
-//     console.log(inputPhone);
-//     router.push(`/ours/reservationFinish/${inputName}${inputPhone}`)
-    
-//   }
-//   return (  
+  const router = useRouter();
 
-  
- // 각각의 handler 함수 작성
  const nameSendHandler = (event) => {
     setCustomerName(event.target.value);
   };
@@ -32,12 +17,47 @@ const Reservation = () => {
   const phoneSendHandler = (event) => {
     setCustomerPhone(event.target.value);
   }
+//셀렉트박스
+const [customerCount, setCustomerCount] = useState("");
+const counts = [1,2,3,4,5,6,7,8,9,10];
+
+const options = counts.map((count) => {
+  return <option value={count}>{count}</option>;
+});
+
+console.log(customerCount);
+
+const countSendHandler = (event) => {
+  setCustomerCount(event.target.value);
+};
+function generateReservNum(){
+  let alphabet = 'abcdefghijklmnopqrstuvwxyz';
+  var makeReservNum = '';
+  for(let i=0; i<10;i++){
+      let index = Math.floor(Math.random(10) * alphabet.length);
+      makeReservNum += alphabet[index];        
+  }
+
+  return makeReservNum;    
+}
+
+const reservationNumber = generateReservNum();
+console.log(reservationNumber);
+
 
  // addTodo 함수 작성
  const sendReserv = () => {
+    const inputName = document.getElementById("name").value;
+    const inputPhone = document.getElementById("phone").value;
+    console.log(inputName);
+    console.log(inputPhone);
+    router.push({pathname : `/ours/reservationFinish/[inputName][inputPhone][random]`, query:{inputName: inputName, inputPhone :inputPhone, reservationNumber : reservationNumber}})
      const data = {
-         customerName : customerName,
-         customerPhone : customerPhone,
+      customerName : customerName,
+      customerPhone : customerPhone,
+      customerCount : customerCount,
+      reservationNumber : reservationNumber,
+         
      }
      console.log(data);
 
@@ -53,7 +73,9 @@ const Reservation = () => {
       <div className={styles.contentbox}>
         <img src="/images/house.png"></img>
         <h1 className={styles.expname}>{props.villageName}</h1>
-
+        {/* <h1 className={styles.expname}>{props.experienceName}</h1>
+        <h1 className={styles.expname}>{props.address}</h1>
+        <h1 className={styles.expname}>{props.managerPhone}</h1> */}
         <table className={styles.table} border="1">
         <thead>
           <tr>
@@ -135,6 +157,7 @@ const Reservation = () => {
         이름 : <input type="text" name="customerName" value={customerName} onChange={nameSendHandler} className={styles.input} id="name" /> &nbsp;&nbsp;
         연락처 : <input type="text" name="customerPhone" value={customerPhone} onChange={phoneSendHandler} className={styles.input} id="phone" />
         </div>
+        {/* <button className={styles.reservationbutton} onClick = {reservation_click}>예약하기</button> */}
         <button className={styles.reservationbutton} onClick = {sendReserv}>예약하기</button>
         </div>
        </div> 
