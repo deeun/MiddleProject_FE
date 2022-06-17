@@ -10,6 +10,9 @@ const Main = (props) => {
   const Main = () => {
     router.push('/ours/main')
   }
+
+ 
+
   return (
     <>
     <div className={styles.reservationinformation}>

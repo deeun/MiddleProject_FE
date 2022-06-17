@@ -3,7 +3,7 @@ import ReservationFinish from '../../../components/Ours/Our/ReservationFinish'
 
 // Reservation에서 ReservationFinish로 연결해주는 api
 
-const add = () => {
+const add = (props) => {
   return (
     <ReservationFinish />
   )

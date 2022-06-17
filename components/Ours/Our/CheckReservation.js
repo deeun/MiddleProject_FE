@@ -4,34 +4,15 @@ import { getAccommAPI } from '../../../lib/api/accommodation'
 import { useState } from 'react'
 import styles from '../../Ours/Our/CheckReservation.module.css'
 
-let number = {};
+// 예약 확인을 위한 번호입력 페이지
+
 const CheckReservation = (props) => {
   const router = useRouter();
-  // const CheckReservationInfo = () => {
-  //   console.log('CheckReservationInfo');
-  //   router.push('/ours/checkReservationInfo')
-  // }
-
-const accommodations = props.accommodations.map(accommodation => {
-    if (props.inputNumber === accommodation.reservationNumber){
-        number = accommodation;
-    }
-});
-
-
-const reservationNumber = number.reservationNumber;
-
-
-const [inputNumber, setInputNumber] = useState('');
-const revNumSendHandler = (event) => {
-  setInputNumber(event.target.value);
-}
-
-const checkReservationInfo = (e) => {
-  // console.log(e.target.value);
-  router.push(`/ours/reservationNumber/${e.target.value}`);
-}
-getAccommAPI
+  const CheckReservationInfo = () => {
+    const info = document.getElementById('experience_search').value;
+    router.push({pathname :`/ours/checkReservationInfos/[info]`
+    ,query : {info : info}})
+  }
 
   return (
     <>
@@ -53,8 +34,9 @@ getAccommAPI
         <input type="text" className={styles.input} name="reservationNumber" value={inputNumber} onChange={revNumSendHandler} 
         placeholder="예약번호를 입력해주세요." />
         <br/><br/><br/>
-      <button className={styles.button} onClick = {checkReservationInfo}>조회하기</button>
+      <button className={styles.button} onClick = {()=>CheckReservationInfo()}>조회하기</button>
     </div>
+
     </div>
     </>
   )

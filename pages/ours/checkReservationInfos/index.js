@@ -1,11 +1,11 @@
 import React from 'react'
-import CheckReservationInfo from '../../components/Ours/Our/CheckReservationInfo'
+import CheckReservationInfos from '../../../components/Ours/Our/CheckReservationInfos'
 
 // CheckReservtion에서 CheckReservtionInfo로 연결해주는 api
 
 const add = () => {
   return (
-    <CheckReservationInfo />
+    <CheckReservationInfos />
   )
 }
 
