@@ -16,11 +16,11 @@ const Our = (props) => {
     <ul>
       <div className={styles.mainbox}>
       <div className={styles.listing_text}>
-        <h3>{props.villageName}</h3>
-          <p className={styles.listing_textclass}> {props.experienceName}</p>
+        <h2>{props.villageName}</h2>
+          <p className={styles.fontbold}> {props.experienceName}</p>
           <span className={styles.fontbold}>(주소){props.address}</span>&nbsp;&nbsp;
           <span className={styles.fontbold}>(전화번호){props.managerPhone}</span><br/>
-          <button className={styles.rsv_btn} value={props.villageName} onClick={detail}>예약하기</button>
+          <button className={styles.rsv_btn} value={props.villageName} onClick={detail}>결제하기</button>
           <br/><br/>
       </div>
       </div> 

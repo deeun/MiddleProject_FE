@@ -16,8 +16,8 @@ const Main = (props) => {
   return (
     <>
     <div className={styles.reservationinformation}>
+      {/* <img src = "/images/checked.png" /> */}
       <h2 className={styles.h2}>예약이 완료되었습니다</h2>
-        
         <table className={styles.table} border="1">
           <th className={styles.th}>&nbsp;예약자&nbsp;</th>
           <th className={styles.th}>&nbsp;연락처&nbsp;</th>
@@ -30,7 +30,7 @@ const Main = (props) => {
         </table>
    
         <br/><br/>
-        <h2>
+        <h2 className={styles.h2}>
           예약한 체험정보
         </h2>
         <table className={styles.table} border="1">
@@ -60,9 +60,28 @@ const Main = (props) => {
           </tbody>
         </table>
    
-
         <br/><br/>
-      <button onClick = {Main}>홈으로</button>
+
+        <h2 className={styles.h2}>
+          결제 정보
+        </h2>
+        <span className = {styles.text}>
+          결제는 무통장 입금만 가능합니다. <br/>
+          예약자 성함으로 입금 주시면 확인 후 유선 연락 드리오니 참고 바랍니다. <br/>
+        </span>
+        <br/>
+        <table className={styles.table} border="1">
+          <th className={styles.th}>&nbsp;은행&nbsp;</th>
+          <th className={styles.th}>&nbsp;계좌번호&nbsp;</th>
+          <th className={styles.th}>&nbsp;예금주&nbsp;</th>
+          <tr>
+            <td className={styles.td}>&nbsp;국민은행&nbsp;</td>
+            <td className={styles.td}>&nbsp;318002-04-036760&nbsp;</td>
+            <td className={styles.td}>&nbsp;우리 것 대한민국 농어촌 체험 사업단&nbsp;</td>
+            </tr>
+        </table>
+
+      <button className={styles.button} onClick = {Main}>홈으로</button>
     </div>
     </>
   )

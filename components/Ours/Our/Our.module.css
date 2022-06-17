@@ -162,3 +162,7 @@
     align-items: center;
     flex-direction: column;
 }
+
+.fontbold {
+    font-size: 17px;
+}
