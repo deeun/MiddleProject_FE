@@ -1,13 +1,22 @@
 .market_body{
-    width: 1000px;
-    display: flex;
-    margin: 0 auto;
-}
-.market_main{
-    width: 600px;
-    margin: 0 auto;
+    width: 100%;
     display: flex;
     flex-direction: column;
+    align-items: center;
+}
+
+.market_main{
+    padding: 0px 20px 10px 20px;
+    margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+    display: flex;
+    
+}
+.market_location{
+    margin-top: 20px;
+    background-color: #f7f0c6;
+    height: 800px;
 }
 .sale_check{
     background-color: lightblue;
@@ -24,20 +33,131 @@
 }
 
 .img > img{
-    /* width: 50%; */
+    width: 50%;
     margin:  0 auto;
-    height: 100px;
+    height: 200px;
 }
 
-.menu{
+.modal_hidden{
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+    position: fixed;  
+    top : 0;
+    left : 0;
+    width: 100%;
+    height : 100%;
+    display: flex;   
+    justify-content: center;    
+    align-items: center;   
+}
+.modal__overlay{
+    width: 100%;
+    height : 100%;
+    position: absolute;
+    
+}
+
+.modal__content{    
+    background-color: white;
+    padding: 50px 50px;
+    text-align: center;
+    position: relative;
+    width : 15%;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+    border-radius: 15px;
+      
+}
+.modal__content > .input{
+    margin-bottom: 1em;   
+   width: 100%;
+   height: 3.3em;  
+
+}
+
+.deleteComment{
+    float: right;
+}
+.modifyBtn{
+   float: right;
+}
+
+.eachComment{
+    margin: 20px 0px 20px 0px;
+}
+.name{
+    font-weight: bold;
+    font-size: large;
+}
+.userchat{
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+.chatBody{
+    -ms-overflow-style: none;
+    }
+    .chatBody::-webkit-scrollbar {
+        display: none;
+      }
+.chatScroll{
+    max-height: 200px;
+    overflow: scroll;
+    -ms-overflow-style: none;
+ }
+ .chatScroll::-webkit-scrollbar{
+   display:none;
+ }
+.userName{
+    background-color: #4287f5;
+}
+.chatUD{
+    float: right;
+}
+.time{
+    float: right;
+}
+.inputValue{
+    margin: 10px 0px 10px 0px;
+}
+
+.hidden{
+    display: none;
+}
+.chatBody{
+    margin-top: 35px;
+    padding: 0px 20px 10px 20px;
+}
+.chat{
     width: 600px;
     margin: 0 auto;
-    margin-top: 10px;
-    display: flex;
-
 }
-.menu_main{
-    background-color: #f0f0f0;
-    margin-right: 10px
-    ;
+
+.text{
+    font-size: x-large;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+.btn{
+    appearance: none;
+    background-color: #2ea44f;
+    border: #2ea44f;
+    border-radius: 6px;
+    box-sizing: border-box;
+    color: #fff;
+    display: inline-block;
+    align-items: center;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 20px;
+    padding: 10px 26px;
+    text-align: center;
+}
+
+.input{
+    width: 500px;
+  height: 32px;
+  font-size: 15px;
+  border: 0;
+  border-radius: 15px;
+  outline: none;
+  padding-left: 10px;
+  background-color: rgb(233, 233, 233);
 }
