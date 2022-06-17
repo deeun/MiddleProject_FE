@@ -20,9 +20,9 @@ const Main = (props) => {
           <th className={styles.th}>&nbsp;연락처&nbsp;</th>
           <th className={styles.th}>&nbsp;예약번호&nbsp;</th>
           <tr>
-            <td className={styles.td}>&nbsp;{props.name}&nbsp;</td>
-            <td className={styles.td}>&nbsp;{props.phone}&nbsp;</td>
-            <td className={styles.td}>&nbsp;REDFKDJADJ234&nbsp;</td>
+            <td className={styles.td}>&nbsp;{props.inputName}&nbsp;</td>
+            <td className={styles.td}>&nbsp;{props.inputPhone}&nbsp;</td>
+            <td className={styles.td}>&nbsp;{props.reservationNumber}&nbsp;</td>
             </tr>
         </table>
    

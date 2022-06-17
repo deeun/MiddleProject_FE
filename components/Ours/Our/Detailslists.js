@@ -13,11 +13,20 @@ const Detailslists = (props) => {
     });
 
     const villageName = place.villageName
+    const experienceName = place.experienceName
+    const address = place.address
+    const managerPhone = place.managerPhone
     console.log("행복"+villageName);
     // villageName : 거북이 행복마을
     const Reservation = () => {
       console.log('Reservation')
-      router.push( `/ours/reservation/${villageName}`)
+      router.push( {pathname : `/ours/reservation/[villageName][experienceName][address][managerPhone]`, 
+      query:{
+        villageName: villageName,
+        experienceName : experienceName,
+        address : address,
+        managerPhone : managerPhone
+    }})
     
     
     }

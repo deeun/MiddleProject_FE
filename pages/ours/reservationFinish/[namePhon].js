@@ -5,10 +5,10 @@ import { useRouter } from 'next/router';
 
 const add = (props) => {
     const router = useRouter();
-    console.log(router.query.inputName);
-    console.log(router.query.inputPhone);        
+    console.log("tlqkf"+router.query.inputName);
+    console.log("tlqkf"+router.query.inputPhone);        
   return (
-    <ReservationFinish inputName = {router.query.inputName} inputPhone={router.query.inputPhone}/>
+    <ReservationFinish inputName = {router.query.inputName} inputPhone={router.query.inputPhone} reservationNumber={router.query.reservationNumber}/>
   )
 }
 
