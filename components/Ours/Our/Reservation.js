@@ -3,14 +3,20 @@ import { useRouter } from 'next/router'
 import styles from './Reservation.module.css'
 import { useState } from 'react'
 import { postAccommAPI } from '../../../lib/api/accommodation'
+import ReservationFinish from './ReservationFinish'
 
 const Reservation = (props) => {
 
+ const router = useRouter();
 
-  const router = useRouter();
-  
  const [customerName, setCustomerName] = useState('');
  const [customerPhone, setCustomerPhone] = useState('');
+
+ const villageName = props.villageName
+ const experienceName = props.experienceName
+ const address = props.address
+ const managerPhone = props.managerPhone
+
   
  // 각각의 handler 함수 작성
 
@@ -56,7 +62,17 @@ console.log(reservationNumber);
     const inputPhone = document.getElementById("phone").value;
     console.log(inputName);
     console.log(inputPhone);
-    router.push({pathname : `/ours/reservationFinish/[inputName][inputPhone][random]`, query:{inputName: inputName, inputPhone :inputPhone, reservationNumber : reservationNumber}})
+    router.push({pathname : `/ours/reservationFinish/[inputName][inputPhone][random][villageName][experienceName][address][managerPhone]`,
+     query:{inputName: inputName,
+       inputPhone :inputPhone,
+        reservationNumber : reservationNumber,
+        villageName: villageName,
+        experienceName : experienceName,
+        address :address,
+        managerPhone : managerPhone
+      
+      }})
+
      const data = {
       customerName : customerName,
       customerPhone : customerPhone,
@@ -65,10 +81,7 @@ console.log(reservationNumber);
          
      }
      console.log(data);
-
- 
-
-
+    
   const options = counts.map((count) => {
     return <option value={count}>{count}</option>;
   });
@@ -78,40 +91,10 @@ console.log(reservationNumber);
   const countSendHandler = (event) => {
     setCustomerCount(event.target.value);
   };
-  
-  // const [reservationNumber, setReservationNumber] = useState("");
-  
-  function generateReservNum(){
-    let alphabet = 'abcdefghijklmnopqrstuvwxyz';
-    var makeReservNum = '';
-    for(let i=0; i<9;i++){
-        let index = Math.floor(Math.random(10) * alphabet.length);
-        makeReservNum += alphabet[index];        
-    }
-    return makeReservNum;    
-  }
-
-  const reservationNumber = generateReservNum();
-  console.log(reservationNumber);
-  
-  // addTodo 함수 작성
-  const sendReserv = () => {
-    const data = {
-      customerName : customerName,
-      customerPhone : customerPhone,
-      customerCount : customerCount,
-      reservationNumber : reservationNumber,
-  }
-  console.log(data);
-  
   postAccommAPI(data);
-
- router.replace('/ours/reservationFinish');
  }
-}
   return (
     <>
-  
     <div className={styles.body}>
       <div className={styles.contentbox}>
         <img src="/images/house.png"></img>
@@ -169,8 +152,6 @@ console.log(reservationNumber);
     </div>
     </>
   )
-      
 }
-
 
 export default Reservation
