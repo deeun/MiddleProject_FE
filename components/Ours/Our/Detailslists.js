@@ -10,6 +10,7 @@ const Detailslists = (props) => {
         if (props.realName === detailslist.villageName){
             place = detailslist;
         }
+   
     });
 
     const villageName = place.villageName

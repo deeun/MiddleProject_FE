@@ -4,6 +4,7 @@ import Our from '../Ours/Our/Our'
 
 const Ours = (props) => {
     // if (props.our) {
+        console.log(props);
         const ours = props.ours.map (our => (
             <Our 
                 programListId = {our.programListId}
