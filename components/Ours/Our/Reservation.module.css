@@ -1,0 +1,74 @@
+.contentbox {
+    margin-left: 100px;
+    margin-top: 50px;
+}
+
+.expname {
+    color: rgb(0, 80, 0);
+
+}
+.table {
+    border-collapse: collapse;
+    width: 40%;
+    background-color: white;
+}
+
+.th, .td {
+    padding: 10px;
+    text-align: center;
+}
+
+
+.text1 {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.text2 {
+    font-size: 18px;
+}
+
+.reservationbutton {
+    margin-top: 50px;;
+    appearance: none;
+    background-color: #2ea44f;
+    border: 1px solid rgba(27, 31, 35, .15);
+    border-radius: 6px;
+    box-shadow: rgba(27, 31, 35, .1) 0 1px 0;
+    box-sizing: border-box;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 20px;
+    padding: 12px 22px;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    vertical-align: middle;
+    white-space: nowrap;
+}
+
+.adultcount, .studentcount, .childrencount {
+    width: 10%;
+	height: 30px;
+	font-size: 14px;
+    border: 1px solid rgba(27, 31, 35, .15);
+    border-radius: 6px;
+    box-shadow: rgba(27, 31, 35, .1) 0 1px 0;
+    outline: none;
+}
+
+.dateinput {
+    width: 10%;
+	height: 30px;
+	font-size: 14px;
+    border: 1px solid rgba(27, 31, 35, .15);
+    border-radius: 6px;
+    box-shadow: rgba(27, 31, 35, .1) 0 1px 0;
+    outline: none;
+}
