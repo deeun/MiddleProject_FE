@@ -6,7 +6,7 @@ const Ours = (props) => {
     // if (props.our) {
         console.log(props);
         const ours = props.ours.map (our => (
-            <Our 
+            <Our key={our.programListId}
                 programListId = {our.programListId}
                 villageName = {our.villageName}
                 stateName={our.stateName} 

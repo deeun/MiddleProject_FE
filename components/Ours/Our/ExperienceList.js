@@ -17,7 +17,7 @@ const Main = (props) => {
                     <div className={styles.et_filter_text}>
                       <h3 className={styles.text}>검색어 입력</h3>
                       <span className={styles.listing_word}>
-                        <input className={styles.search} name="ctl00$content$searchword" type="text" id="searchword" placeholder="검색어를 입력하세요." onclientclick="return submit_check();" />
+                        <input className={styles.search} name="ctl00$content$searchword" type="text" id="searchword" placeholder="검색어를 입력하세요." />
                       </span>
                     </div> 
                 </div>         
@@ -31,7 +31,7 @@ const Main = (props) => {
                     <input type="date" className={styles.checkout}/>
                     </span> 
                     <div className={styles.et_filte}>
-                      <input type="submit" name="ctl00$content$buttonSearch" value="검색" onClick="return submit_check() ;" className={styles.content_buttonSearch} />    
+                      <input type="submit" name="ctl00$content$buttonSearch" value="검색" className={styles.content_buttonSearch} />    
                       </div>
                   </div> 
                   

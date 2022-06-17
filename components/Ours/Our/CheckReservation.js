@@ -1,7 +1,5 @@
 import React from 'react'
 import { useRouter } from 'next/router'
-import { getAccommAPI } from '../../../lib/api/accommodation'
-import { useState } from 'react'
 import styles from '../../Ours/Our/CheckReservation.module.css'
 
 // 예약 확인을 위한 번호입력 페이지
@@ -31,7 +29,7 @@ const CheckReservation = (props) => {
       <br/><br/>
       </div>
     </div>
-        <input type="text" className={styles.input} name="reservationNumber" value={inputNumber} onChange={revNumSendHandler} 
+        <input type="text" className={styles.input} name="reservationNumber"  
         placeholder="예약번호를 입력해주세요." />
         <br/><br/><br/>
       <button className={styles.button} onClick = {()=>CheckReservationInfo()}>조회하기</button>
