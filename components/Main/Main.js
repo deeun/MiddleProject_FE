@@ -56,11 +56,11 @@ const Main = (props) => {
               <div className={styles.number2}><a href="/ours/states/state2"><h3>4</h3>인천</a></div>
               <div className={styles.number3}><a href="/ours/states/state3"><h3>5</h3>강원</a></div>
               <div className={styles.number4}><a href="/ours/states/state4"><h3>1</h3>충남</a></div>
-              <div className={styles.number5}><a href="/ours/states/state5"><h3>4</h3>전남</a></div>
+              <div className={styles.number5}><a href="/ours/states/state5"><h3>3</h3>전남</a></div>
               <div className={styles.number6}><a href="/ours/states/state6"><h3>3</h3>전북</a></div>
-              <div className={styles.number7}><a href="/ours/states/state7"><h3>7</h3>경남</a></div>
+              <div className={styles.number7}><a href="/ours/states/state7"><h3>4</h3>경남</a></div>
               <div className={styles.number8}><a href="/ours/states/state8"><h3>0</h3>경북</a></div>
-              <div className={styles.number9}><a href="/ours/states/state9"><h3>4</h3>제주</a></div>
+              <div className={styles.number9}><a href="/ours/states/state9"><h3>0</h3>제주</a></div>
             </div>
           </div>
         </div>

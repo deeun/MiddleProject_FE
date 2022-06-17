@@ -107,8 +107,8 @@ console.log(reservationNumber);
   postAccommAPI(data);
 
  router.replace('/ours/reservationFinish');
+ }
 }
-
   return (
     <>
   
@@ -169,6 +169,7 @@ console.log(reservationNumber);
     </div>
     </>
   )
+      
 }
 
 
